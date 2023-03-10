@@ -1,45 +1,127 @@
-hr {
-  margin-top: 30px;
-  margin-bottom: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Post navigation links */
-.post_navi {
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  background-color: #eee;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-nav ul {
   display: flex;
 }
 
-.post_navi-label {
-  font-size: 0.8em;
-  opacity: 0.5;
+.header-nav ul li {
+  margin-left: 20px;
 }
 
-.post_navi .post_navi-item {
-  padding: 0 2.2em;
-  width: 50%;
-  position: relative;
-  color: inherit !important;
+.header-nav ul li:first-child {
+  margin-left: 0;
 }
 
-.post_navi .nav_prev {
-  text-align: left;
+.header-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.post_navi .nav_next {
-  text-align: right;
+.header-nav ul li a:hover {
+  color: #007bff;
 }
 
-.post_navi .nav_prev .post_navi-arrow {
-  left: 0;
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.post_navi .nav_next .post_navi-arrow {
-  right: 0;
+section {
+  margin-bottom: 40px;
 }
 
-.post_navi .post_navi-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5em;
-  opacity: 0.3;
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container img {
+  width: 300px;
+  margin-right: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  width: calc(33.33% - 20px);
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-post {
+  width: calc(50% - 20px);
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-container img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .blog-post {
+    width: 100%;
+  }
 }
